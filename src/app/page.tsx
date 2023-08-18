@@ -51,8 +51,8 @@ function Calculator({ ...props }: any) {
       <CalculatorBox>
       <CalculatorRow>
           <CalculatorButton onClick={() => inputRef.current.value = '0'}>C</CalculatorButton>
-          <CalculatorButton>x²</CalculatorButton>
-          <CalculatorButton>sqrt(x)</CalculatorButton>
+          <CalculatorButton onClick={() => inputRef.current.value = `sqrt(${inputRef.current.value})`}>sqrt</CalculatorButton>
+          <CalculatorButton onClick={() => inputRef.current.value = `${inputRef.current.value}^`}>^</CalculatorButton>
           <CalculatorButton onClick={() => inputRef.current.value = math.evaluate(inputRef.current.value)}>=</CalculatorButton>
         </CalculatorRow>
         <CalculatorRow>
